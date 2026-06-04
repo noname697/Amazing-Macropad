@@ -34,11 +34,11 @@ The circuit was designed to be compact and functional, using a centralized micro
 
 The bottom case was modeled using parametric design techniques based on the STEP file exported from KiCad, following these technical specifications:
 
-* **Internal PCB tolerance:** `0.4 mm` on each side to ensure clearance during assembly.
-* **Wall thickness:** `10.0 mm` for high structural and acoustic resistance.
-* **Base thickness:** `3.0 mm`.
-* **USB-C port cutout:** Aligned with the physical connector and with a `0.2 mm` clearance.
-* **Mounting:** 4 reinforcement columns (*bosses*) in the corners with flat-bottom blind holes of **Ø 4.7 mm** for installing brass heat-set inserts.
+- **Internal PCB tolerance:** `0.4 mm` on each side to ensure clearance during assembly.
+- **Wall thickness:** `10.0 mm` for high structural and acoustic resistance.
+- **Base thickness:** `3.0 mm`.
+- **USB-C port cutout:** Aligned with the physical connector and with a `0.2 mm` clearance.
+- **Mounting:** 4 reinforcement columns (_bosses_) in the corners with flat-bottom blind holes of **Ø 4.7 mm** for installing brass heat-set inserts.
 
 ---
 
@@ -48,16 +48,16 @@ The table below lists all components required for the complete assembly of the h
 
 | Item | Component                   | Quantity | Description / Specification                                |
 | :--- | :-------------------------- | :------: | :--------------------------------------------------------- |
-| 1    | Custom PCB                  |     1    | Printed circuit board developed in KiCad                   |
-| 2    | XIAO_RP2040 microcontroller |     1    | Seeed Studio XIAO RP2040 or CircuitPython-compatible board |
-| 3    | Mechanical switches         |     3    | Cherry MX-style switches or compatible                     |
-| 4    | Keycaps                     |     3    | Keycaps compatible with MX switches                        |
-| 5    | LEDs                        |     3    | LEDs connected to pin D3                                   |
-| 6    | Heat-set inserts            |     4    | M3 × 5 × 4 mm brass inserts                                |
-| 7    | M3 screws                   |     4    | M3 × 16 mm screws                                          |
-| 8    | Bottom case                 |     1    | 3D-printed part based on the `Bottom.STEP` file            |
-| 9    | Top cover / switch plate    |     1    | 3D-printed part based on the `Top.STEP` file               |
-| 10   | USB-C cable                 |     1    | Cable for connecting the macropad to the computer          |
+| 1    | Custom PCB                  |    1     | Printed circuit board developed in KiCad                   |
+| 2    | XIAO_RP2040 microcontroller |    1     | Seeed Studio XIAO RP2040 or CircuitPython-compatible board |
+| 3    | Mechanical switches         |    3     | Cherry MX-style switches or compatible                     |
+| 4    | Keycaps                     |    3     | Keycaps compatible with MX switches                        |
+| 5    | LEDs                        |    3     | LEDs connected to pin D3                                   |
+| 6    | Heat-set inserts            |    4     | M3 × 5 × 4 mm brass inserts                                |
+| 7    | M3 screws                   |    4     | M3 × 16 mm screws                                          |
+| 8    | Bottom case                 |    1     | 3D-printed part based on the `Bottom.STEP` file            |
+| 9    | Top cover / switch plate    |    1     | 3D-printed part based on the `Top.STEP` file               |
+| 10   | USB-C cable                 |    1     | Cable for connecting the macropad to the computer          |
 
 ---# ⌨️ Custom Tecladinho Macropad
 
@@ -65,9 +65,9 @@ This project consists of the complete development of a **custom 3-key macropad**
 
 The macropad was designed to execute quick music commands:
 
-* Key 1: previous track
-* Key 2: next track
-* Key 3: pause/play
+- Key 1: previous track
+- Key 2: next track
+- Key 3: pause/play
 
 ---
 
@@ -79,10 +79,10 @@ The PCB was developed in **KiCad** with a focus on simplicity and compactness. T
 
 | Function               | Pin |
 | :--------------------- | :-: |
-| Key 1 — previous track |  D0 |
-| Key 2 — next track     |  D1 |
-| Key 3 — play/pause     |  D2 |
-| LEDs                   |  D3 |
+| Key 1 — previous track | D0  |
+| Key 2 — next track     | D1  |
+| Key 3 — play/pause     | D2  |
+| LEDs                   | D3  |
 
 The three keys are used as digital inputs in the firmware, while the LEDs are controlled by pin D3.
 
@@ -171,8 +171,8 @@ The case was modeled in **Autodesk Fusion 360** based on the PCB dimensions expo
 
 The model is divided into two parts:
 
-* `Top.STEP` — top cover / switch plate
-* `Bottom.STEP` — bottom base of the case
+- `Top.STEP` — top cover / switch plate
+- `Bottom.STEP` — bottom base of the case
 
 ### Case specifications
 
@@ -239,14 +239,14 @@ tecladinho-macropad/
 
 ## ✅ Project Status
 
-* [x] Electrical schematic in KiCad
-* [x] PCB layout
-* [x] Bottom case modeling
-* [x] Top cover modeling
-* [x] Basic firmware in KMK
-* [x] STEP file export
-* [ ] Physical assembly
-* [ ] Final firmware test
+- [x] Electrical schematic in KiCad
+- [x] PCB layout
+- [x] Bottom case modeling
+- [x] Top cover modeling
+- [x] Basic firmware in KMK
+- [x] STEP file export
+- [ ] Physical assembly
+- [ ] Final firmware test
 
 ---
 
@@ -261,7 +261,5 @@ According to the project guidelines, the structural files must be exported and s
 1. In Fusion 360, go to **File ➔ Export**.
 2. Change the file type to **.STEP**.
 3. Export both parts separately:
-
-   * `Topo.STEP` — The top switch plate.
-   * `Inferior.STEP` — The bottom shell/case.
-
+   - `Topo.STEP` — The top switch plate.
+   - `Inferior.STEP` — The bottom shell/case.
