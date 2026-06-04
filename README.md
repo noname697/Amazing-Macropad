@@ -1,114 +1,114 @@
-# ⌨️ Tecladinho Macropad Custom
+# ⌨️ Custom Tecladinho Macropad
 
-Este projeto consiste no desenvolvimento completo de um teclado macropad customizado, integrando o design de circuito eletrônico no **KiCad** e a modelagem mecânica do estojo no **Autodesk Fusion 360**. O projeto foi dimensionado parametricamente para garantir encaixes precisos e furos adequados para inserts rosqueados (heatsets).
-
----
-
-## 📸 Demonstração do Projeto
-
-### Render / Captura do Design do Macropad
-
-![Estojo fechado](./images/box.png)
-
-### Desenho Técnico e Modelagem 3D do Estojo
-
-![Estojo aberto](./images/opened_box.png)
+This project consists of the complete development of a custom macropad keyboard, integrating the electronic circuit design in **KiCad** and the mechanical case modeling in **Autodesk Fusion 360**. The project was parametrically dimensioned to ensure precise fits and proper holes for threaded inserts (heatsets).
 
 ---
 
-## ⚡ Desenvolvimento Eletrônico (KiCad)
+## 📸 Project Demo
 
-O circuito foi planejado para ser compacto e funcional, utilizando um microcontrolador centralizado e furos de montagem estrategicamente posicionados nos quatro cantos da placa.
+### Render / Screenshot of the Macropad Design
 
-### Esquema Elétrico
+![Closed case](./images/box.png)
 
-![Esquema Elétrico no KiCad](./images/electric_schema.png)
+### Technical Drawing and 3D Modeling of the Case
 
-### Layout do PCB (Edge Cuts e Trilhas)
-
-![Layout do PCB](./images/PCB_layout.png)
+![Opened case](./images/opened_box.png)
 
 ---
 
-## 🛠️ Especificações do Estojo (Fusion 360)
+## ⚡ Electronic Development (KiCad)
 
-O estojo inferior foi modelado utilizando técnicas de design paramétrico a partir do arquivo STEP exportado do KiCad, seguindo as seguintes especificações técnicas:
+The circuit was designed to be compact and functional, using a centralized microcontroller and mounting holes strategically positioned in the four corners of the board.
 
-- **Tolerância interna do PCB:** `0.4 mm` em cada lado para garantir folga na montagem.
-- **Espessura das paredes:** `10.0 mm` para alta resistência estrutural e acústica.
-- **Espessura da base:** `3.0 mm`.
-- **Recorte da porta USB-C:** Alinhado com o conector físico e folga de `0.2 mm`.
-- **Fixação:** 4 colunas de reforço (_bosses_) nos cantos com furos cegos de fundo chato de **Ø 4.7 mm** para instalação de inserts de latão via calor.
+### Electrical Schematic
 
----
+![Electrical Schematic in KiCad](./images/electric_schema.png)
 
-## 📦 Lista de Materiais (BOM)
+### PCB Layout (Edge Cuts and Traces)
 
-A tabela abaixo lista todos os componentes necessários para a montagem completa do hardware e da estrutura mecânica:
-
-| Item | Componente                    | Quantidade | Descrição / Especificação                                |
-| :--- | :---------------------------- | :--------: | :------------------------------------------------------- |
-| 1    | PCB customizada               |     1      | Placa de circuito impresso desenvolvida no KiCad         |
-| 2    | Microcontrolador XIAO_RP2040  |     1      | Seeed Studio XIAO RP2040 ou compatível com CircuitPython |
-| 3    | Switches mecânicos            |     3      | Switches tipo Cherry MX ou compatíveis                   |
-| 4    | Keycaps                       |     3      | Keycaps compatíveis com switches MX                      |
-| 5    | LEDs                          |     3      | LEDs conectados ao pino D3                               |
-| 6    | Inserts heat-set              |     4      | Inserts de latão M3 × 5 × 4 mm                           |
-| 7    | Parafusos M3                  |     4      | Parafusos M3 × 16 mm                                     |
-| 8    | Estojo inferior               |     1      | Peça impressa em 3D a partir do arquivo `Bottom.STEP`    |
-| 9    | Tampa superior / switch plate |     1      | Peça impressa em 3D a partir do arquivo `Top.STEP`       |
-| 10   | Cabo USB-C                    |     1      | Cabo para conexão do macropad ao computador              |
-
----# ⌨️ Tecladinho Macropad Custom
-
-Este projeto consiste no desenvolvimento completo de um **macropad customizado de 3 teclas**, integrando o design eletrônico feito no **KiCad**, a modelagem mecânica do estojo no **Autodesk Fusion 360** e o firmware em **KMK/CircuitPython** para controle de mídia.
-
-O macropad foi projetado para executar comandos rápidos de música:
-
-- Tecla 1: música anterior
-- Tecla 2: próxima música
-- Tecla 3: pausar/reproduzir
+![PCB Layout](./images/PCB_layout.png)
 
 ---
 
-## ⚡ Desenvolvimento Eletrônico
+## 🛠️ Case Specifications (Fusion 360)
 
-A PCB foi desenvolvida no **KiCad** com foco em simplicidade e compactação. O projeto utiliza um microcontrolador compatível com CircuitPython e três teclas mecânicas para controle de mídia.
+The bottom case was modeled using parametric design techniques based on the STEP file exported from KiCad, following these technical specifications:
 
-### Pinos utilizados
+* **Internal PCB tolerance:** `0.4 mm` on each side to ensure clearance during assembly.
+* **Wall thickness:** `10.0 mm` for high structural and acoustic resistance.
+* **Base thickness:** `3.0 mm`.
+* **USB-C port cutout:** Aligned with the physical connector and with a `0.2 mm` clearance.
+* **Mounting:** 4 reinforcement columns (*bosses*) in the corners with flat-bottom blind holes of **Ø 4.7 mm** for installing brass heat-set inserts.
 
-| Função                    | Pino |
-| :------------------------ | :--: |
-| Tecla 1 — música anterior |  D0  |
-| Tecla 2 — próxima música  |  D1  |
-| Tecla 3 — play/pause      |  D2  |
-| LEDs                      |  D3  |
+---
 
-As três teclas são utilizadas como entradas digitais no firmware, enquanto os LEDs são controlados pelo pino D3.
+## 📦 Bill of Materials (BOM)
+
+The table below lists all components required for the complete assembly of the hardware and mechanical structure:
+
+| Item | Component                   | Quantity | Description / Specification                                |
+| :--- | :-------------------------- | :------: | :--------------------------------------------------------- |
+| 1    | Custom PCB                  |     1    | Printed circuit board developed in KiCad                   |
+| 2    | XIAO_RP2040 microcontroller |     1    | Seeed Studio XIAO RP2040 or CircuitPython-compatible board |
+| 3    | Mechanical switches         |     3    | Cherry MX-style switches or compatible                     |
+| 4    | Keycaps                     |     3    | Keycaps compatible with MX switches                        |
+| 5    | LEDs                        |     3    | LEDs connected to pin D3                                   |
+| 6    | Heat-set inserts            |     4    | M3 × 5 × 4 mm brass inserts                                |
+| 7    | M3 screws                   |     4    | M3 × 16 mm screws                                          |
+| 8    | Bottom case                 |     1    | 3D-printed part based on the `Bottom.STEP` file            |
+| 9    | Top cover / switch plate    |     1    | 3D-printed part based on the `Top.STEP` file               |
+| 10   | USB-C cable                 |     1    | Cable for connecting the macropad to the computer          |
+
+---# ⌨️ Custom Tecladinho Macropad
+
+This project consists of the complete development of a **custom 3-key macropad**, integrating the electronic design made in **KiCad**, the mechanical case modeling in **Autodesk Fusion 360**, and the firmware in **KMK/CircuitPython** for media control.
+
+The macropad was designed to execute quick music commands:
+
+* Key 1: previous track
+* Key 2: next track
+* Key 3: pause/play
+
+---
+
+## ⚡ Electronic Development
+
+The PCB was developed in **KiCad** with a focus on simplicity and compactness. The project uses a CircuitPython-compatible microcontroller and three mechanical keys for media control.
+
+### Used pins
+
+| Function               | Pin |
+| :--------------------- | :-: |
+| Key 1 — previous track |  D0 |
+| Key 2 — next track     |  D1 |
+| Key 3 — play/pause     |  D2 |
+| LEDs                   |  D3 |
+
+The three keys are used as digital inputs in the firmware, while the LEDs are controlled by pin D3.
 
 ---
 
 ## 💻 Firmware
 
-O firmware foi desenvolvido utilizando **KMK**, que roda sobre **CircuitPython**. Essa escolha facilita a configuração do teclado, permitindo editar o comportamento das teclas diretamente em Python.
+The firmware was developed using **KMK**, which runs on top of **CircuitPython**. This choice makes keyboard configuration easier, allowing the key behavior to be edited directly in Python.
 
-### Funções das teclas
+### Key functions
 
-| Tecla | Ação            |
-| :---: | :-------------- |
-|   1   | Música anterior |
-|   2   | Próxima música  |
-|   3   | Play/Pause      |
+| Key | Action         |
+| :-: | :------------- |
+|  1  | Previous track |
+|  2  | Next track     |
+|  3  | Play/Pause     |
 
-### Arquivo principal
+### Main file
 
-O firmware principal deve ser salvo no XIAO como:
+The main firmware must be saved on the XIAO as:
 
 ```text
 main.py
 ```
 
-### Código base
+### Base code
 
 ```python
 import board
@@ -119,18 +119,18 @@ from kmk.scanners.keypad import KeysScanner
 
 keyboard = KMKKeyboard()
 
-# Teclas conectadas nos pinos D0, D1 e D2.
-# Cada tecla fecha contato com GND quando pressionada.
+# Keys connected to pins D0, D1, and D2.
+# Each key connects to GND when pressed.
 keyboard.matrix = KeysScanner(
     pins=(board.D0, board.D1, board.D2),
     value_when_pressed=False,
     pull=True,
 )
 
-# Mapa das teclas:
-# Tecla 1: música anterior
-# Tecla 2: próxima música
-# Tecla 3: play/pause
+# Keymap:
+# Key 1: previous track
+# Key 2: next track
+# Key 3: play/pause
 keyboard.keymap = [
     [
         KC.MPRV,
@@ -139,8 +139,8 @@ keyboard.keymap = [
     ]
 ]
 
-# LEDs conectados ao pino D3.
-# Este bloco considera LEDs endereçáveis do tipo NeoPixel/WS2812.
+# LEDs connected to pin D3.
+# This block assumes NeoPixel/WS2812 addressable LEDs.
 try:
     import neopixel
 
@@ -165,57 +165,57 @@ if __name__ == "__main__":
 
 ---
 
-## 🛠️ Modelagem Mecânica
+## 🛠️ Mechanical Modeling
 
-O estojo foi modelado no **Autodesk Fusion 360** a partir das dimensões da PCB exportada do KiCad em formato STEP.
+The case was modeled in **Autodesk Fusion 360** based on the PCB dimensions exported from KiCad in STEP format.
 
-O modelo é dividido em duas partes:
+The model is divided into two parts:
 
-- `Top.STEP` — tampa superior / switch plate
-- `Bottom.STEP` — base inferior do estojo
+* `Top.STEP` — top cover / switch plate
+* `Bottom.STEP` — bottom base of the case
 
-### Especificações do estojo
+### Case specifications
 
-| Elemento             | Especificação                                  |
-| :------------------- | :--------------------------------------------- |
-| Folga interna da PCB | 0,4 mm em cada lado                            |
-| Espessura da base    | 3 mm                                           |
-| Altura das paredes   | Ajustada para proteger a PCB e alinhar o USB-C |
-| Recorte USB-C        | Alinhado ao conector físico da placa           |
-| Fixação interna      | Colunas com insertos heat-set                  |
-| Furos para insertos  | Ø 4,7 mm × 4 mm de profundidade                |
-| Parafusos            | M3 × 16 mm                                     |
+| Element                | Specification                                    |
+| :--------------------- | :----------------------------------------------- |
+| Internal PCB clearance | 0.4 mm on each side                              |
+| Base thickness         | 3 mm                                             |
+| Wall height            | Adjusted to protect the PCB and align the USB-C  |
+| USB-C cutout           | Aligned with the physical connector on the board |
+| Internal mounting      | Columns with heat-set inserts                    |
+| Insert holes           | Ø 4.7 mm × 4 mm deep                             |
+| Screws                 | M3 × 16 mm                                       |
 
 ---
 
-## 🚀 Exportação dos Arquivos para Produção
+## 🚀 Exporting Files for Production
 
-Os arquivos mecânicos devem ser exportados em formato **STEP**, e não em STL, para preservar a geometria CAD com maior precisão.
+The mechanical files must be exported in **STEP** format, not STL, to preserve the CAD geometry with greater precision.
 
-### Arquivos necessários
+### Required files
 
 ```text
 Top.STEP
 Bottom.STEP
 ```
 
-### Exportando no Fusion 360
+### Exporting in Fusion 360
 
-1. No Fusion 360, deixe visível apenas a peça que deseja exportar.
-2. Esconda a PCB e os outros componentes.
-3. Clique com o botão direito no componente desejado.
-4. Selecione **Exportar**.
-5. Escolha o formato **STEP**.
-6. Exporte cada peça separadamente:
+1. In Fusion 360, make only the part you want to export visible.
+2. Hide the PCB and the other components.
+3. Right-click the desired component.
+4. Select **Export**.
+5. Choose the **STEP** format.
+6. Export each part separately:
 
 ```text
-Top.STEP     → tampa superior / switch plate
-Bottom.STEP  → base inferior do estojo
+Top.STEP     → top cover / switch plate
+Bottom.STEP  → bottom base of the case
 ```
 
 ---
 
-## 📁 Estrutura sugerida do repositório
+## 📁 Suggested repository structure
 
 ```text
 tecladinho-macropad/
@@ -237,29 +237,31 @@ tecladinho-macropad/
 
 ---
 
-## ✅ Status do Projeto
+## ✅ Project Status
 
-- [x] Esquema elétrico no KiCad
-- [x] Layout da PCB
-- [x] Modelagem do estojo inferior
-- [x] Modelagem da tampa superior
-- [x] Firmware básico em KMK
-- [x] Exportação dos arquivos STEP
-- [ ] Montagem física
-- [ ] Teste final do firmware
+* [x] Electrical schematic in KiCad
+* [x] PCB layout
+* [x] Bottom case modeling
+* [x] Top cover modeling
+* [x] Basic firmware in KMK
+* [x] STEP file export
+* [ ] Physical assembly
+* [ ] Final firmware test
 
 ---
 
-## 🧠 Autor
+## 🧠 Author
 
-Projeto desenvolvido por **Arthur Lima Manenti** como um macropad customizado de 3 teclas para controle de mídia.
+Project developed by **Arthur Lima Manenti** as a custom 3-key macropad for media control.
 
-## 🚀 Como Exportar os Arquivos para Produção
+## 🚀 How to Export the Files for Production
 
-De acordo com as diretrizes do projeto, os arquivos estruturais devem ser exportados e enviados no formato **.STEP** para preservar as curvas e geometrias exatas para a equipe de impressão 3D:
+According to the project guidelines, the structural files must be exported and submitted in **.STEP** format to preserve the exact curves and geometries for the 3D printing team:
 
-1. No Fusion 360, vá em **File ➔ Export**.
-2. Altere o tipo de arquivo para **.STEP**.
-3. Exporte as duas partes separadamente:
-   - `Topo.STEP` — A placa de comutação superior.
-   - `Inferior.STEP` — A casca/estojo inferior.
+1. In Fusion 360, go to **File ➔ Export**.
+2. Change the file type to **.STEP**.
+3. Export both parts separately:
+
+   * `Topo.STEP` — The top switch plate.
+   * `Inferior.STEP` — The bottom shell/case.
+
